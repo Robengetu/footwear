@@ -25,6 +25,6 @@ Frontend: HTML, CSS, JavaScript
 
 Backend: PHP
 
-Database: MySQL / PostgreSQL
+Database: MySQL
 
 Other: Sessions for cart and authentication, prepared statements for security
