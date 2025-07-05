@@ -23,6 +23,10 @@ Bits Footwear is a full-stack e-commerce web application designed for selling fo
 🛠 Tech Stack
 Frontend: HTML, CSS, JavaScript
 
+Font Awesome (for icons/fonts)
+
+ZAMP / XAMPP (local server environment)
+
 Backend: PHP
 
 Database: MySQL
