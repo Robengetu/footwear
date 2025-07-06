@@ -1,0 +1,19 @@
+* [33m7e5c2d3[m[33m ([m[1;31morigin/login-feature[m[33m, [m[1;32mlogin-feature[m[33m, [m[1;32madd-css-style[m[33m)[m Add login and logout functionality
+* [33me385cf1[m[33m ([m[1;31morigin/add-css-style[m[33m)[m Add styles.css file for SmartShop UI
+*   [33m43a05ed[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mlogin-feature-fixed[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/login-feature-fixed[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Merge pull request #2 from Robengetu/add-js
+[32m|[m[33m\[m  
+[32m|[m * [33m3e37163[m Add files via upload
+* [33m|[m [33mffbbec9[m Delete database
+* [33m|[m [33m62e95da[m Create database folder
+[33m|[m[33m/[m  
+*   [33mf95d060[m Merge pull request #1 from ezra-7/add-css-file
+[34m|[m[35m\[m  
+[34m|[m * [33mfb53c83[m Add styles.css for styling
+[34m|[m[34m/[m  
+* [33m66fa058[m Delete styles.css
+* [33mb937da1[m Add files via upload
+* [33m541a8b4[m Update README.md
+* [33m92ef755[m Add files via upload
+* [33mf9a4779[m Update README.md
+* [33m7e50e0d[m Update README.md
+* [33m4dbda12[m Initial commit
