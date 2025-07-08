@@ -25,7 +25,7 @@ Frontend: HTML, CSS, JavaScript
 
 Font Awesome (for icons/fonts)
 
-ZAMP / XAMPP (local server environment)
+XAMPP (local server environment)
 
 Backend: PHP
 
