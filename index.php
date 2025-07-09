@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_id'])) {
     <div class="container">
       <div class="logo">
         <p class="welcome-text">Welcome, <?= htmlspecialchars($_SESSION['username']); ?> | <a href="backend/logout.php">Logout</a></p>
-        <span class="bits-logo"><i class="fas fa-shoe-prints"></i> BITS FOOTWEAR</span>
+        <span class="bits-logo" style="cursor:pointer;" onclick="document.querySelector('.tab-btn[data-target=\'home\']').click();"><i class="fas fa-shoe-prints"></i> BITS FOOTWEAR</span>
       </div>
       <nav class="nav">
         <a href="#" class="nav-link tab-btn active" data-target="home">Home</a>
@@ -39,7 +39,7 @@ if (!isset($_SESSION['user_id'])) {
           <div id="accountName" class="account-dropdown">
             <p><?= htmlspecialchars($_SESSION['username']); ?></p>
           </div>
-          <span class="icon cart-icon" id="cart-icon" data-count="0" title="View Cart" onclick="document.querySelector('.shopping-cart').scrollIntoView({ behavior: 'smooth' });">
+          <span class="icon cart-icon" id="cart-icon" data-count="0" title="View Cart" onclick="document.querySelector('.tab-btn[data-target=\'home\']').click(); setTimeout(function(){document.querySelector('.shopping-cart').scrollIntoView({ behavior: 'smooth' });}, 300);">
             <i class="fas fa-shopping-cart"></i>
             <span class="cart-count">0</span>
           </span>
