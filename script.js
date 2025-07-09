@@ -201,7 +201,7 @@ function updateCartUI() {
             cartItem.innerHTML = `
                 <div class="cart-item-details">
                     <strong>${item.name}</strong>
-                    <span>x ${item.quantity}</span>
+                    <div style="font-size: 0.85em; color: #888;">Qty: ${item.quantity}</div>
                 </div>
                 <div class="cart-item-price">
                     $${itemTotal.toFixed(2)}
@@ -214,6 +214,34 @@ function updateCartUI() {
             cartTotal.textContent = `Total: $${totalPrice.toFixed(2)}`;
         }
     }
+}
+
+// Add delegated event listener for quantity buttons
+if (!window.qtyBtnListenerAdded) {
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('qty-btn')) {
+            const name = e.target.getAttribute('data-name');
+            const isIncrease = e.target.classList.contains('increase');
+            const cartItem = e.target.closest('.cart-item');
+            let qty = parseInt(cartItem.querySelector('.cart-item-qty').textContent);
+            qty = isIncrease ? qty + 1 : Math.max(1, qty - 1);
+            fetch('backend/cart_handler.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `action=update_quantity&name=${encodeURIComponent(name)}&quantity=${qty}`
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'updated') {
+                    cartData = data;
+                    updateCartUI();
+                } else {
+                    showToast('Failed to update quantity', 'error');
+                }
+            });
+        }
+    });
+    window.qtyBtnListenerAdded = true;
 }
 
 // Clear cart
