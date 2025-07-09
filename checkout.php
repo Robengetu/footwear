@@ -70,7 +70,7 @@ function getCartItems($user_id) {
       <h3><i class="fas fa-university"></i> Payment Information</h3>
       <div class="bank-info">
         <div class="bank-detail">
-          <strong>Bank Name:</strong> XYZ Bank
+          <strong>Bank Name:</strong> COMMERCIAL BANK OF ETH
         </div>
         <div class="bank-detail">
           <strong>Account Number:</strong> 1234567890
