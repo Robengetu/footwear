@@ -77,8 +77,8 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                         $pdo->beginTransaction();
             
                         // Insert into orders table
-                        $stmt = $pdo->prepare("INSERT INTO orders (user_id, total_amount, payment_screenshot) VALUES (?, ?, ?)");
-                        $stmt->execute([$user_id, $totalAmount, $fileName]);
+                        $stmt = $pdo->prepare("INSERT INTO orders (user_id, phone, total_amount, payment_screenshot) VALUES (?, ?, ?, ?)");
+                        $stmt->execute([$user_id, $phone, $totalAmount, $fileName]);
             
                         $orderId = $pdo->lastInsertId();
             
